@@ -15,3 +15,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+  Finding-something-interesting:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+      - run: echo "This job is tedious. Are you sure to continue"
+      - run: echo "end job now"
