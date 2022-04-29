@@ -10,6 +10,8 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - name: Setup Maven Action
-        uses: LucaFeger/action-maven-cli@1.1.0
+        uses: stCarolas/setup-maven@v4.3
+        with:
+          maven-version: 3.8.2
       - run: mvn -V package
       - run: ls ./cicd-2/
