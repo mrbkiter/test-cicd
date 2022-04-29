@@ -9,6 +9,6 @@ jobs:
         with:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
-      - run: pwd
+      - run: echo '${{github.workspace}}'
       - run: cd ./cicd-2/src/main/java/test/personal/cicd2/
       - run: java -cp java HelloWorld
