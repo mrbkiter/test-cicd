@@ -18,7 +18,7 @@ jobs:
 
       - run: |
           cd cicd-2/
-          mvn -V package docker:build
+          mvn package docker:build
 #
 #  Deploy-docker:
 #    runs-on: ubuntu-latest
