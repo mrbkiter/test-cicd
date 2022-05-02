@@ -16,7 +16,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - run: mvn -V package docker:build
+      - run: |
+        cd cicd-2/  
+        mvn -V package docker:build
 #
 #  Deploy-docker:
 #    runs-on: ubuntu-latest
