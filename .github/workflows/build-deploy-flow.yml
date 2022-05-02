@@ -17,8 +17,8 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - run: |
-        cd cicd-2/  
-        mvn -V package docker:build
+          cd cicd-2/
+          mvn -V package docker:build
 #
 #  Deploy-docker:
 #    runs-on: ubuntu-latest
