@@ -1,8 +1,9 @@
 name: deploy-flow
 on:
-  workflows: [build-flow]
-  types:
-    - completes
+  workflow_run:
+    workflows: [build-flow]
+    types:
+      - completes
 jobs:
   on-success:
     runs-on: ubuntu-latest
