@@ -1,3 +1,4 @@
+name: deploy-prod
 on:
   workflow_run:
     types: [completed]
