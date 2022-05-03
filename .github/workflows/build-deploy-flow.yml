@@ -38,7 +38,7 @@ jobs:
     needs: [build]
     environment: prod
     steps:
-      - run: echo 'Deploying prod. Update code'
+      - run: echo 'Deploying prod. Update'
 
   deploy-staging:
     runs-on: ubuntu-latest
