@@ -3,7 +3,7 @@ on:
   workflow_run:
     workflows: [build-flow]
     types:
-      - completes
+      - completed
 jobs:
   on-success:
     runs-on: ubuntu-latest
