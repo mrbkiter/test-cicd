@@ -1,0 +1,19 @@
+on:
+  workflow_run:
+    types: [completed]
+    workflows: [build-deploy]
+    branches: [main]
+
+jobs:
+  extract-number:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - run: echo run_id '${{github.run_id}}'
+      - run: echo run_number '${{github.run_number}}'
+      - run: echo github.sha '${{github.sha}}'
+  deploy-prod-sin:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - run: echo 'Deploying prod. Update'
