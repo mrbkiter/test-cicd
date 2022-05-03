@@ -27,8 +27,8 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - run: echo run_id '${{github.run_id}}'
-       - run: echo run_number '${{github.run_number}}'
-       - run: echo github.sha '${{github.sha}}'
+      - run: echo run_number '${{github.run_number}}'
+      - run: echo github.sha '${{github.sha}}'
       - run: echo 'Build completed'
 #      - run: |
 #          cd cicd-2/
