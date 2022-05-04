@@ -34,7 +34,7 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-        - run: echo 'Build completed'
+      - run: echo 'Build completed'
 #      - run: |
 #          cd cicd-2/
 #          mvn package docker:build

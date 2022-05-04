@@ -11,15 +11,15 @@ jobs:
     if: ${{github.event.workflow_run.conclusion == 'success'}}
     steps:
       - name: Download math result for job 2
-          uses: actions/download-artifact@v3
-          with:
-            name: homework
+        uses: actions/download-artifact@v3
+        with:
+          name: homework
       - name: Print the final result
         shell: bash
         run: |
           value=`cat math-homework.txt`
           echo The result is $value
-          
+
   deploy-prod-sin:
     runs-on: ubuntu-latest
     environment: prod
