@@ -26,10 +26,15 @@ jobs:
           maven-version: 3.8.2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
-      - run: echo run_id '${{github.run_id}}'
-      - run: echo run_number '${{github.run_number}}'
-      - run: echo github.sha '${{github.sha}}'
-      - run: echo 'Build completed'
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v3
+        with:
+          name: homework
+          path: math-homework.txt
+        - run: echo 'Build completed'
 #      - run: |
 #          cd cicd-2/
 #          mvn package docker:build
